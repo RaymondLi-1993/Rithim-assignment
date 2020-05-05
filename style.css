@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    height: 100vh;
+    display: flex;
+    background-color: #e1b382
+    
+  }
+  
+  img{
+    width: 100px;
+  }
+  
+  #board{
+    width: 700px;
+    height: 700px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    bottom: -50;
+    margin: auto;
+    bottom: -170px;
+    right: 430px
+  }
+  
+  .card{
+    width:calc(25% - 10px);
+    width: calc(33.33% - 10px);
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+  }
+  
+  .card-front,
+  .card-back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #2d545e;
+    backface-visibility: hidden;
+  }
+  
+  .card-front{
+    transform: rotateY(180deg);
+  }
+  
+  .card.flip{
+  transform: rotateY(180deg);
+  }
+  
+  #click-counter{
+    font-family: Impact, Charcoal, sans-serif;
+    color: #333333;
+    font-size: 50px;
+    position: absolute;
+    display: fixed;
+    top: 165px;
+    left: 575px;
+  }
+  
+  #button{
+    position: relative;
+    margin: 10px;
+    right: -100px;
+    top: 170px;
+    width: 100px;
+    height: 30px;
+  }
+  
+  .overlay-text{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #12343b;
+    font-family: Impact, sans-serif;
+  }
+  
+  .overlay-text.visible{
+    display: flex;
+    animation: overlay-grow 500ms forwards;
+  }
+  
+  @keyframes overlay-grow{
+    from{
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 0;
+    }
+    to{
+      background-color: rgba(0, 0, 0, .8);
+      font-size: 10em;
+    }
+  }
+  
+  .title-name{
+    position: relative;
+    left: 540px;
+    font-size: 50px;
+    font-family: Impact, Charcoal, sans-serif;
+    color: #333333;
+    height: 160px;
+    width: 500px;
+  }
+  
+  .flip-number{
+    position: relative;
+    top: 165px;
+    font-size: 50px;
+    width: 220px;
+    left: -120px;
+    font-family: Impact, Charcoal, sans-serif;
+    color: #333333;
+  }
+  
+  .new-game{
+  position: absolute;
+  width: 100px;
+  height: 31px;
+  background-color: #659dbd;
+  font-family: Impact, Charcoal, sans-serif;
+    color: #333333;
+  font-size: 20px;
+  }
+  
+  .highScores-list{
+    position: relative;
+    font-size: 30px;
+    top: 100px;
+    height: 100px;
+    width: 100px;
+    right: -325px;
+    font-family: Impact, sans-serif;
+    color: #333333;
+  }
+  
+  .previous-highScores{
+    position: relative;
+    top: 110px;
+    height: 100px;
+    width: 100px;
+    right: -160px;
+    font-family: Impact, sans-serif;
+    color: #333333;
+  
+  }

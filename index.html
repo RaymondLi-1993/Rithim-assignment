@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" async></script>
+    <title>Memory Game</title>
+</head>
+<body>
+   <div class="overlay-text visible">Click to Start</div>
+    <header id="tile" class="title-name">
+        MATCH THIS CARD!
+    </header>
+    <div id="highScores" class="highScores-list"></div>
+    <span id="previous" class="previous-highScores">HighScore:</span>
+   <div id = 'click-counter' >0</div>
+        <span id="flips" class="flip-number">Flips</span>  
+        <div id="button">
+        <button id="newGame" class="new-game" >newGame</button>
+        </div>  
+    <section id="board" class="Memory-game">
+        <div class="card" data-name="angewomon"><img class="card-front" src="https://vignette.wikia.nocookie.net/digimon-adventure5140/images/2/24/Angewomon_tri.png/revision/latest?cb=20170427224150"><img class="card-back" src="https://vignette.wikia.nocookie.net/logopedia/images/d/db/Digimon_Logo_Vector.svg/revision/latest/scale-to-width-down/340?cb=20190225192804"></div>
+        <div class="card" data-name="angemon"><img class="card-front" src="https://vignette.wikia.nocookie.net/p__/images/0/0b/Angemon_tri.png/revision/latest?cb=20180430041820&amp;path-prefix=protagonist"><img class="card-back" src="https://vignette.wikia.nocookie.net/logopedia/images/d/db/Digimon_Logo_Vector.svg/revision/latest/scale-to-width-down/340?cb=20190225192804"></div>
+        <div class="card" data-name="metalgarurumon"><img class="card-front" src="https://vignette.wikia.nocookie.net/iso33private/images/e/e4/Metalgarurumon_tri2.png/revision/latest?cb=20171111232202"><img class="card-back" src="https://vignette.wikia.nocookie.net/logopedia/images/d/db/Digimon_Logo_Vector.svg/revision/latest/scale-to-width-down/340?cb=20190225192804"></div>
+        <div class="card" data-name="birdramon"><img class="card-front" src="https://vignette.wikia.nocookie.net/digimon-adventure5140/images/8/8a/Birdramon_tri.png/revision/latest?cb=20170317012938"><img class="card-back" src="https://vignette.wikia.nocookie.net/logopedia/images/d/db/Digimon_Logo_Vector.svg/revision/latest/scale-to-width-down/340?cb=20190225192804"></div>    
+        <div class="card" data-name="metalgreymon"><img class="card-front" src="https://vignette.wikia.nocookie.net/digimon-adventure5140/images/c/c1/Metalgreymon_render.png/revision/latest?cb=20170117004130"><img class="card-back" src="https://vignette.wikia.nocookie.net/logopedia/images/d/db/Digimon_Logo_Vector.svg/revision/latest/scale-to-width-down/340?cb=20190225192804"></div>
+        <div class="card" data-name="weregrurumon"><img class="card-front" src="https://vignette.wikia.nocookie.net/p__/images/4/4a/WereGarurumon_tri..png/revision/latest?cb=20170917220807&amp;path-prefix=protagonist"><img class="card-back" src="https://vignette.wikia.nocookie.net/logopedia/images/d/db/Digimon_Logo_Vector.svg/revision/latest/scale-to-width-down/340?cb=20190225192804"></div>
+        <div class="card" data-name="angemon"><img class="card-front" src="https://vignette.wikia.nocookie.net/p__/images/0/0b/Angemon_tri.png/revision/latest?cb=20180430041820&amp;path-prefix=protagonist"><img class="card-back" src="https://vignette.wikia.nocookie.net/logopedia/images/d/db/Digimon_Logo_Vector.svg/revision/latest/scale-to-width-down/340?cb=20190225192804"></div>
+        <div class="card" data-name="angewomon"><img class="card-front" src="https://vignette.wikia.nocookie.net/digimon-adventure5140/images/2/24/Angewomon_tri.png/revision/latest?cb=20170427224150"><img class="card-back" src="https://vignette.wikia.nocookie.net/logopedia/images/d/db/Digimon_Logo_Vector.svg/revision/latest/scale-to-width-down/340?cb=20190225192804"></div>
+        <div class="card" data-name="metalgarurumon"><img class="card-front" src="https://vignette.wikia.nocookie.net/iso33private/images/e/e4/Metalgarurumon_tri2.png/revision/latest?cb=20171111232202"><img class="card-back" src="https://vignette.wikia.nocookie.net/logopedia/images/d/db/Digimon_Logo_Vector.svg/revision/latest/scale-to-width-down/340?cb=20190225192804"></div>
+        <div class="card" data-name="birdramon"><img class="card-front" src="https://vignette.wikia.nocookie.net/digimon-adventure5140/images/8/8a/Birdramon_tri.png/revision/latest?cb=20170317012938"><img class="card-back" src="https://vignette.wikia.nocookie.net/logopedia/images/d/db/Digimon_Logo_Vector.svg/revision/latest/scale-to-width-down/340?cb=20190225192804"></div>
+        <div class="card" data-name="metalgreymon"><img class="card-front" src="https://vignette.wikia.nocookie.net/digimon-adventure5140/images/c/c1/Metalgreymon_render.png/revision/latest?cb=20170117004130"><img class="card-back" src="https://vignette.wikia.nocookie.net/logopedia/images/d/db/Digimon_Logo_Vector.svg/revision/latest/scale-to-width-down/340?cb=20190225192804"></div>
+        <div class="card" data-name="weregrurumon"><img class="card-front" src="https://vignette.wikia.nocookie.net/p__/images/4/4a/WereGarurumon_tri..png/revision/latest?cb=20170917220807&amp;path-prefix=protagonist"><img class="card-back" src="https://vignette.wikia.nocookie.net/logopedia/images/d/db/Digimon_Logo_Vector.svg/revision/latest/scale-to-width-down/340?cb=20190225192804"></div>
+    </section>
+</body>
+</html>
